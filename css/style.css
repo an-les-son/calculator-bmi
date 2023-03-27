@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8em;
+}
+
+.container {
+  width: 50%;
+  height: 700px;
+  /* border: 1px solid black; */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+table img {
+  width: 5%;
+}
+
+.td-label {
+  width: 40%;
+  text-align: left;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+/* halaman input */
+.kotak-hitung {
+  width: 100%;
+  height: 700px;
+  /* border: 1px solid black; */
+}
+
+.header p:first-child,
+.kotak-hasil .hasil p:first-child {
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(0, 162, 255);
+}
+
+.kotak-hasil .hasil p:last-child {
+  font-size: 0.7em;
+  width: 70px;
+  padding: 5px;
+  background-color: rgb(0, 162, 255);
+  color: white;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+
+.header p:last-child,
+.footer {
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.footer p:first-child {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: rgb(0, 162, 255);
+}
+
+.footer ol {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.footer p {
+  margin-top: 10px;
+}
+
+.footer sup {
+  font-size: 0.5em;
+}
+
+input {
+  font-size: 0.8em;
+  padding: 3px;
+}
+
+.kotak-hitung .form {
+  width: 50%;
+  padding: 20px 0 40px 40px;
+  background-color: rgb(202, 234, 253);
+  border-radius: 10px;
+  margin: 20px auto;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form .btn-form button {
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.form .btn-form button:hover {
+  cursor: pointer;
+}
+
+.form .jenis-kelamin {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.form .jenis-kelamin label {
+  margin: 0 5px;
+}
+
+.btn-biru {
+  background-color: rgb(0, 162, 255);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 0;
+  margin-right: 10px;
+}
+
+.btn-biru:hover {
+  cursor: pointer;
+}
+
+.form table tr td {
+  padding: 5px;
+}
+
+.form table tr td input {
+  border: 0;
+  border-radius: 5px;
+}
+
+/* halaman hasil */
+.kotak-hasil {
+  width: 50%;
+  height: 800px;
+  background-color: white;
+  opacity: 1;
+  z-index: 2;
+}
+
+#keterangan-1 {
+  line-height: 1.2em;
+  margin-top: 10px;
+}
+
+.kotak-hasil .penjelasan {
+  margin-top: 10px;
+}
+
+.kotak-hasil .hasil-hitung,
+.kotak-hasil .penyakit1,
+.kotak-hasil .penyakit2 {
+  text-align: center;
+  line-height: 3em;
+}
+
+.kotak-hasil .hasil-hitung p:first-child,
+.penyakit1 p,
+.penyakit2 p {
+  font-size: 1.2em;
+}
+
+.kotak-hasil .hasil-hitung p:nth-child(2) {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.kotak-hasil .kosultasi {
+  text-align: justify;
+  line-height: 1.5em;
+  margin: 20px 0;
+  position: relative;
+}
+
+.kosultasi button {
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.kotak-hasil .penyakit1 ol,
+.kotak-hasil .penyakit2 ol {
+  line-height: 1.5em;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.kotak-hasil .btn-bawah {
+  display: flex;
+  justify-content: center;
+}
+
+.kotak-hasil .download {
+  margin-top: 250px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.kotak-hasil .download-apps img {
+  margin: 10px 3px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.kotak-hasil .download .footer-name {
+  font-size: 0.6em;
+  padding-bottom: 200px;
+}
+
+.disable {
+  display: none;
+}
+
+/* layering display */
+.p-hasil {
+  width: 50%;
+  position: absolute;
+  top: 20px;
+  transform: translate(1);
+  transition: all 3s;
+  z-index: 2;
+}
+
+.p-hilang {
+  transform: translate(0);
+  transition: all 1s;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+}

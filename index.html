@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Halaman pertama / form pengisian data -->
+      <div id="p-atas" class="kotak-hitung">
+        <div class="header">
+          <p>Kalkulator BMI</p>
+          <p>
+            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+          </p>
+        </div>
+        <div class="form">
+          <table>
+            <tr>
+              <td style="text-align: left">
+                <label for="">Jenis Kelamin</label>
+              </td>
+              <td>
+                <div class="jenis-kelamin">
+                  <input type="radio" name="jenis-kelamin" value="Pria" required="true" checked />
+                  Pria
+                  <input type="radio" name="jenis-kelamin" value="Wanita" required="true" />Wanita
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-label">Berat Badan (kg)</td>
+              <td><input type="text" id="berat" class="width-80" /> <img src="./assets/edit.png" alt="" /></td>
+            </tr>
+            <tr>
+              <td class="td-label"><label for="">Usia (tahun)</label></td>
+              <td><input type="text" id="usia" class="width-80" /> <img src="./assets/edit.png" alt="" /></td>
+            </tr>
+            <tr>
+              <td class="td-label"><label for="">Tinggi Badan (cm)</label></td>
+              <td><input type="text" id="tinggi" class="width-80" /> <img src="./assets/edit.png" alt="" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="btn-form width-80">
+                <button class="btn-biru" id="hitung">Hitung BMI</button>
+                <button id="reset">Reset</button>
+              </td>
+            </tr>
+          </table>
+          <p id="nongol"></p>
+        </div>
+        <div class="footer">
+          <p>Keunggulan fitur</p>
+          <ol type="1">
+            <li>Menghitung berat badan</li>
+            <li>Menentukan kategori berat badan ideal atau tidak</li>
+            <li>Mempersiapkan program penurunan berat badan</li>
+          </ol>
+          <p>
+            Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang
+            memenuhi syarat seperti dokter.
+          </p>
+          <p>
+            Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam
+            meter) atau BMI = Kg/M<sup>2</sup>.
+          </p>
+        </div>
+      </div>
+      <!-- Halaman kedua / hasil perhitungan BMI-->
+      <div id="p-bawah" class="kotak-hasil">
+        <div class="hasil">
+          <p>Hasil</p>
+          <p id="radio-output"></p>
+        </div>
+        <div class="hasil-hitung">
+          <p id="status"></p>
+          <p id="hasil"></p>
+          <p id="keterangan-1"></p>
+          <button class="btn-biru">Download Hasil BMI</button>
+        </div>
+        <div id="penjelasan1" class="penjelasan disable">
+          <p>Hasil BMI dibawah 18.5</p>
+          <p>Anda berada dalam kategori kekurangan berat badan.</p>
+          <p>Hubungi dokter lebih lanjut mengenai pola makan dan gizi yang baik untuk meningkatkan kesehatan.</p>
+        </div>
+        <div id="penjelasan2" class="penjelasan disable">
+          <p>Hasil BMI diantara 18.5 dan 24.9</p>
+          <p>Anda berada dalam kategori berat badan yang normal.</p>
+          <p>Tetap pertahankan berat badan Anda dan jaga berat badan Anda dengan mengatur keseimbangan antara pola makan dan aktivitas fisik Anda.</p>
+        </div>
+        <div id="penjelasan3" class="penjelasan disable">
+          <p>Hasil BMI diantara 25 dan 29.9</p>
+          <p>Anda berada dalam kategori overweight atau berat badan berlebih.</p>
+          <p>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.</p>
+          <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+        </div>
+        <div id="penjelasan4" class="penjelasan disable">
+          <p>Hasil BMI diatas 30</p>
+          <p>Anda berada dalam kategori obesitas.</p>
+          <p>Usahakan untuk menurunkan berat badan dan menerapkan pola hidup sehat dengan menjaga makan dan aktivitas fisik.</p>
+          <p>Segera kunjungi dokter untuk dilakukan pemeriksaan kesehatan lanjutan untuk mengetahui risiko yang Anda miliki terkait berat badan Anda.</p>
+        </div>
+        <div class="kosultasi">
+          <button class="btn-biru">Konsultasi Ahli Gizi Via Aplikasi</button>
+          <button class="btn-biru">Registrasi Online Ahli Gizi</button>
+          <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+        </div>
+        <div id="penyakit1" class="penyakit1 disable">
+          <p>Berat rendah dapat menyebabkan berbagai masalah penyakit</p>
+          <ol>
+            <li>Infertilitas</li>
+            <li>Anemia</li>
+            <li>Osteoporosis</li>
+            <li>Sistem Imun Lemah</li>
+          </ol>
+        </div>
+        <div id="penyakit2" class="penyakit2 disable">
+          <p>Beberapa penyakit yang berasal dari kegemukan</p>
+          <ol>
+            <li>Diabetes</li>
+            <li>Hipertensi</li>
+            <li>Sakit Jantung</li>
+            <li>Osteoarthritis</li>
+          </ol>
+        </div>
+        <div class="btn-bawah">
+          <button class="btn-biru">Konsultasi Dokter Via Aplikasi</button>
+          <button class="btn-biru">Registrasi Online Sekarang</button>
+        </div>
+        <div class="download">
+          <p>Download Aplikasi</p>
+          <div class="download-apps">
+            <img src="./assets/google-play.png" alt="" />
+            <img src="./assets/app-store.png" alt="" />
+          </div>
+          <p>RevoU</p>
+          <div class="footer-name">
+            <p>Software Engineering Fundamental Course | Mini Project</p>
+            <p>Anjar Oki Wibowo | anjar.oki@gmail.com</p>
+            <p>2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaSricpt -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
